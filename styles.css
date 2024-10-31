@@ -18,8 +18,8 @@ html {
   --max-width: 56rem;
 
   --font-size-button: 1rem;
-  --font-family: -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   --color-light-gray: #f5f5f5;
   --color-background-zebra: var(--color-light-gray);
@@ -40,10 +40,6 @@ button {
   font-size: inherit;
 }
 
-button {
-  padding: 0.25rem 0.5rem;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -52,6 +48,22 @@ main {
   margin: var(--spacing) auto;
   padding-inline: var(--spacing);
   max-width: var(--max-width);
+}
+
+/* Grunnstillingar fyrir líkama */
+body {
+  background-color: #e0f7fa;
+  color: #000;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+}
+
+/* Stíll fyrir fyrirsagnir */
+h1,
+h2 {
+  color: #4169e1;
 }
 
 .weather {
@@ -75,8 +87,24 @@ main {
   list-style-type: none;
 }
 
+/* Stíll fyrir takka */
+.locations__button {
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.locations__button:hover {
+  background-color: #0041c2;
+}
+
 .forecast {
   border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .forecast th,
@@ -87,4 +115,12 @@ main {
 
 .forecast tbody tr:nth-child(2n + 1) {
   background-color: var(--color-background-zebra);
+}
+
+.forecast tr:nth-child(odd) {
+  background-color: #c4e2f8;
+}
+
+.output {
+  margin-top: 20px;
 }

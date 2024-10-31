@@ -70,9 +70,9 @@ function formatDate(isoString) {
       day: "2-digit",
       hour: "2-digit",
       minute: "2-digit",
-      hour12: false, // 24-hour format
+      hour12: false,
     })
-    .replace(",", ""); // Remove the comma between date and time
+    .replace(",", "");
 }
 
 /**
@@ -209,9 +209,16 @@ function render(container, locations, onSearch, onSearchMyLocation) {
   // Búum til <header> með beinum DOM aðgerðum
   const headerElement = document.createElement("header");
   const heading = document.createElement("h1");
-  heading.appendChild(document.createTextNode("Veðurforrit")); // Change as needed
+  heading.appendChild(document.createTextNode("🌧️ Veðurforrit ☀️")); // Change as needed
   headerElement.appendChild(heading);
   parentElement.appendChild(headerElement);
+
+  const introText = el(
+    "h2",
+    {},
+    "Velkomin/n í veðurforritið! Veldu stað til að sjá hita- og úrkomuspá."
+  );
+  parentElement.appendChild(introText);
 
   // Búum til <div> fyrir staðsetningar
   const locationsHeader = el("h2", {}, "Staðsetningar");
