@@ -105,7 +105,7 @@ function renderResults(location, results) {
     el(
       "section",
       {},
-      el("h2", {}, `Leitarniðurstöður fyrir: ${location.title}`), // Updated header
+      el("h2", {}, `Leitarniðurstöður fyrir: ${location.title}`),
       resultsTable
     )
   );
@@ -157,7 +157,7 @@ async function onSearchMyLocation() {
     return;
   }
 
-  renderLoading(); // Show loading status in the UI
+  renderLoading();
 
   navigator.geolocation.getCurrentPosition(
     async (position) => {
@@ -165,13 +165,14 @@ async function onSearchMyLocation() {
       let results;
 
       try {
-        // Use the coordinates to search for weather
+        // notar staðsetningu til að finna veðurspá
         results = await weatherSearch(latitude, longitude);
         renderResults({ title: "Núverandi staðsetning" }, results ?? []);
       } catch (error) {
         renderError(error);
       }
     },
+
     (error) => {
       renderError(new Error(`Villa við að fá staðsetningu: ${error.message}`));
     }
