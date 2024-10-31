@@ -218,6 +218,7 @@ function render(container, locations, onSearch, onSearchMyLocation) {
     {},
     "Velkomin/n í veðurforritið! Veldu stað til að sjá hita- og úrkomuspá."
   );
+
   parentElement.appendChild(introText);
 
   // Búum til <div> fyrir staðsetningar

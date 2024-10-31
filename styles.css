@@ -34,10 +34,24 @@ html {
   font-family: var(--font-family);
 }
 
+body {
+  background-color: #e0f7fa;
+  color: #000;
+}
+
+h1,
+h2 {
+  color: #1560bd;
+}
+
 input,
 textarea,
 button {
   font-size: inherit;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
 }
 
 main {
@@ -48,22 +62,6 @@ main {
   margin: var(--spacing) auto;
   padding-inline: var(--spacing);
   max-width: var(--max-width);
-}
-
-/* Grunnstillingar fyrir líkama */
-body {
-  background-color: #e0f7fa;
-  color: #000;
-}
-
-button {
-  padding: 0.25rem 0.5rem;
-}
-
-/* Stíll fyrir fyrirsagnir */
-h1,
-h2 {
-  color: #4169e1;
 }
 
 .weather {
@@ -87,9 +85,8 @@ h2 {
   list-style-type: none;
 }
 
-/* Stíll fyrir takka */
 .locations__button {
-  background-color: #4169e1;
+  background-color: #1560bd;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -98,7 +95,7 @@ h2 {
 }
 
 .locations__button:hover {
-  background-color: #0041c2;
+  background-color: #1034a6;
 }
 
 .forecast {
@@ -117,8 +114,12 @@ h2 {
   background-color: var(--color-background-zebra);
 }
 
+.forecast tr:nth-child(even) {
+  background-color: #e0f7fa;
+}
+
 .forecast tr:nth-child(odd) {
-  background-color: #c4e2f8;
+  background-color: #b5dff7;
 }
 
 .output {
